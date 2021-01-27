@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@200&display=swap');
+
+.background {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: url(https://wallpaperaccess.com/full/1812893.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+Header {
+    color: white;
+    transition: height 1s;
+}
+
+section {
+    height: 100vh;
+}
+
+.App section:not(:first-of-type) {
+    background: hsl(0, 0%, 74%);
+}
+
+.text.fixed {
+    transform: translateY(8vh);
+}
+
+.content {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.content .text > p:nth-child(1) {
+    font-size: 3vw;
+    font-family: 'Neuton', serif;
+}
+
+.content .text > p:nth-child(2) {
+    font-size: 3.2vw;
+    font-family: 'Neuton', serif;
+}
+
+.spacer {
+    height: 10%;
+}

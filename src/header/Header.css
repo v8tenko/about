@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+
+header#main {
+    display: block;
+    width: 100%;
+    height: 8vh;
+}
+
+header > ul {
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > ul > li {
+    flex: 0 1;
+    display: inline;
+}
+
+header li > p {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+header {
+    animation-name: move-back;
+    animation-duration: 0.25s;
+    color: white;
+}
+
+header.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: white;
+    color: black;
+    animation-name: move-to-fixed;
+    animation-duration: 0.3s;
+}
+
+li.colored {
+    animation-name: hover-animation;
+    animation-duration: .5s;
+    color: green;
+}
+
+header#main.hovered li.colored {
+    color: white;
+}
+
+header#main.fixed.hovered li.colored {
+    color: black;
+}
+
+header li {
+    transition: color .3s;
+}
+
+li:hover {
+    /*animation-name: hover-animation;
+    animation-duration: .3s;*/
+    color: green;
+}
+
+@keyframes move-to-fixed {
+    from {
+        transform: translateY(-8vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move-back {
+    from {
+        transform: translateY(6vh);
+        background: rgba(255, 255, 255, 255);
+    }
+    to {
+        transform: translateY(0);
+        background: rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes hover-animation-white {
+    from {
+        color: white;
+    }
+    to {
+        color: green;
+    }
+
+}
+
